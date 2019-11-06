@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/hello")
 public class HelloAction {
+    
+    //这是在远程仓库上进行的远程修改
     @RequestMapping("/boot")
     @ResponseBody
     public String boot() throws Exception{
