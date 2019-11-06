@@ -1,0 +1,25 @@
+server:
+  port: 8989
+  jsp-servlet:
+    init-parameters:
+      development: true #开启热部署
+spring:
+  profiles:
+    active: dev
+  mvc:
+    view:
+      prefix: / #配置springBoot的视图解析器
+      suffix: .jsp
+  datasource:
+    type: org.apache.commons.dbcp.BasicDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/novel
+    username: root
+    password: root
+  http:
+    multipart:
+      max-request-size: 100000000
+      max-file-size: 100000000
+mybatis:
+  mapper-locations: classpath:com/baizhi/dao/*Mapper.xml
+  type-aliases-package: com.baizhi.entity
